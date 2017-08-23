@@ -1,6 +1,6 @@
 	USE_CAMERA_STUB := true
 
-LOCAL_PATH := device/samsung/gtexslte
+LOCAL_PATH := device/samsung/gtexswifi
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := false
 TARGET_NO_RADIOIMAGE := true
@@ -48,8 +48,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
-TARGET_BOARD_INFO_FILE := device/samsung/gtexslte/board-info.txt
-BOARD_EGL_CFG := device/samsung/gtexslte/egl.cfg
+TARGET_BOARD_INFO_FILE := device/samsung/gtexswifi/board-info.txt
+BOARD_EGL_CFG := device/samsung/gtexswifi/egl.cfg
 
 # Graphics
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -74,15 +74,15 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 # COMMON_GLOBAL_CFLAGS += -DSC8830_HWC
 # COMMON_GLOBAL_CFLAGS += -DBOARD_CANT_REALLOCATE_OMX_BUFFERS
 
-BOARD_RIL_CLASS := ../../../device/samsung/gtexslte/ril
+BOARD_RIL_CLASS := ../../../device/samsung/gtexswifi/ril
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Bluetooth
 USE_BLUETOOTH_BCM4343 := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_SPRD := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexslte/bluetooth
-BOARD_CUSTOM_BT_CONFIG := device/samsung/gtexslte/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexswifi/bluetooth
+BOARD_CUSTOM_BT_CONFIG := device/samsung/gtexswifi/bluetooth/libbt_vndcfg.txt
 SPRD_WCNBT_CHISET := marlin
 BOARD_SPRD_WCNBT_MARLIN := true
 BOARD_HAVE_FM_TROUT := true
@@ -103,7 +103,7 @@ WIFI_DRIVER_FW_PATH_AP      := "ap_mode"
 WIFI_DRIVER_MODULE_PATH     := "/lib/modules/sprdwl.ko"
 WIFI_DRIVER_MODULE_NAME     := "sprdwl"
 
-# TARGET_PREBUILT_KERNEL := kernel/samsung/gtexslte/arch/arm/boot/zImage
+# TARGET_PREBUILT_KERNEL := kernel/samsung/gtexswifi/arch/arm/boot/zImage
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -111,10 +111,10 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charg
 
 # Integrated kernel building configs
 
-TARGET_KERNEL_SOURCE := kernel/samsung/gtexslte
-TARGET_KERNEL_CONFIG := gtexslte_defconfig
-TARGET_VARIANT_CONFIG := gtexslte_defconfig
-TARGET_SELINUX_CONFIG := gtexslte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/gtexswifi
+TARGET_KERNEL_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_VARIANT_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_SELINUX_CONFIG := lineageos_gtexswifi_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 # BOARD_MKBOOTIMG_ARGS := --base 0 --pagesize 2048
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -137,7 +137,7 @@ TARGET_KERNEL_MODULES := SC9830_MODULES
 # Enable WEBGL in WebKit
 ENABLE_WEBGL := true
 
-BOARD_SEPOLICY_DIRS += device/samsung/gtexslte/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/gtexswifi/sepolicy
 
 # Camera
 #zsl capture
@@ -250,7 +250,7 @@ TW_BRIGHTNESS_PATH := "/sys/devices/gen-panel-backlight.29/backlight/panel/brigh
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 162
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/20200000.usb/gadget/lun0/file"
-TARGET_RECOVERY_FSTAB = device/samsung/gtexslte/recovery.fstab
+TARGET_RECOVERY_FSTAB = device/samsung/gtexswifi/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_GRAPHICS_FORCE_USE_LINELENGTH := true
 RECOVERY_GRAPHICS_FORCE_SINGLE_BUFFER := true
