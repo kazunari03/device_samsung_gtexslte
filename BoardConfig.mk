@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/gtexslte/BoardConfigVendor.mk
+-include vendor/samsung/gtexswifi/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := false
@@ -48,8 +48,8 @@ TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
-TARGET_BOARD_INFO_FILE := device/samsung/gtexslte/board-info.txt
-BOARD_EGL_CFG := device/samsung/gtexslte/egl.cfg
+TARGET_BOARD_INFO_FILE := device/samsung/gtexswifi/board-info.txt
+BOARD_EGL_CFG := device/samsung/gtexswifi/egl.cfg
 
 # Resolution
 TARGET_SCREEN_WIDTH := 800
@@ -69,14 +69,14 @@ TARGET_REQUIRES_SYNCHRONOUS_SETSURFACE := true
 COMMON_GLOBAL_CFLAGS += -DSC8830_HWC
 BOARD_CANT_REALLOCATE_OMX_BUFFERS := true
 
-BOARD_RIL_CLASS := ../../../device/samsung/gtexslte/ril
+BOARD_RIL_CLASS := ../../../device/samsung/gtexswifi/ril
 
 # FM radio
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_FM_BCM := true
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexslte/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gtexslte/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/gtexswifi/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/gtexswifi/bluetooth/libbt_vndcfg.txt
 
 # Wifi
 WIFI_DRIVER_MODULE_PATH := /lib/modules/sprdwl.ko
@@ -92,7 +92,7 @@ BOARD_HOSTAPD_DRIVER := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_BAND := 802_11_ABG
 
-TARGET_PREBUILT_KERNEL := kernel/samsung/gtexslte/arch/arm/boot/zImage
+TARGET_PREBUILT_KERNEL := kernel/samsung/gtexswifi/arch/arm/boot/zImage
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -104,10 +104,10 @@ TARGET_KERNEL_HAVE_NTFS := true
 
 # Integrated kernel building configs
 
-TARGET_KERNEL_SOURCE := kernel/samsung/gtexslte
-TARGET_KERNEL_CONFIG := gtexslte_defconfig
-TARGET_VARIANT_CONFIG := gtexslte_defconfig
-TARGET_SELINUX_CONFIG := gtexslte_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/gtexswifi
+TARGET_KERNEL_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_VARIANT_CONFIG := lineageos_gtexswifi_defconfig
+TARGET_SELINUX_CONFIG := lineageos_gtexswifi_defconfig
 
 SC9830_MODULES:
 	mkdir -p $(PRODUCT_OUT)/root/lib/modules
@@ -123,7 +123,7 @@ SC9830_MODULES:
 
 TARGET_KERNEL_MODULES := SC9830_MODULES
 
-BOARD_SEPOLICY_DIRS += device/samsung/gtexslte/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/gtexswifi/sepolicy
 
 # Camera
 CAMERA_SUPPORT_SIZE := 5M
@@ -144,7 +144,7 @@ TARGET_BOARD_USE_ALC_AE_AWB := true
 
 TARGET_HAS_BACKLIT_KEYS := false
 
-TARGET_RECOVERY_FSTAB = device/samsung/gtexslte/recovery.fstab
+TARGET_RECOVERY_FSTAB = device/samsung/gtexswifi/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_MISC_PARTITION := true
